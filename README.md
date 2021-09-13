@@ -68,3 +68,5 @@ current_audio = AudioSegment.from_file('Cmaj7_chord.mp3')
 speed_change_ratio = 0.7
 current_audio_slow_down = ae.speed_down(current_audio, speed_change_ratio)
 ```
+
+### There will be more on the list, I will document some other functions here when I have time
