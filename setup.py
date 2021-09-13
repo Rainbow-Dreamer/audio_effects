@@ -13,7 +13,7 @@ setup(name='audio_effects',
       download_url=
       'https://github.com/Rainbow-Dreamer/audio_effects/archive/0.15.tar.gz',
       keywords=['python', 'audio', 'effects'],
-      install_requires=['pydub', 'simpleaudio', 'numpy'],
+      install_requires=['pydub', 'numpy'],
       classifiers=[
           'Development Status :: 3 - Alpha',
           'Intended Audience :: Developers',
