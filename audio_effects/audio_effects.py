@@ -31,7 +31,7 @@ def delay(sound, interval=0.5, unit=6, volumes=None, decrease_unit=None):
     # placing at a interval one after another after the original sound
 
     # sound: a pydub AudioSegment instance
-    
+
     # interval: the time between each delay sound in seconds
 
     # unit: the number of the delay sounds
