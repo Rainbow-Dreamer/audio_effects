@@ -74,7 +74,10 @@ def pitch_change(sound,
                  crossfade_threshold=10,
                  chunk_size2=50):
     # this is a pitch change function using pydub, it is a lot faster than librosa method,
-    # but when you raise the pitch, the speed of the audio cannot preserve very well
+    # but when you raise the pitch, the speed of the audio cannot preserve very well,
+    # so this function will perform speed changes of audio using speedup function which are already
+    # implemented in pydub, and speed_down function written by me to keep the speed and length of the audio
+    # after pitch changes to not change too much
     new_sample_rate = int(sound.frame_rate * (2.0**(semitones / 12)))
     result = sound._spawn(sound.raw_data,
                           overrides={'frame_rate': new_sample_rate})
@@ -189,41 +192,3 @@ def speed_change(sound,
 
 def chorus(sound):
     pass
-
-
-r'''
-# test examples
-
-# the delay function works really well using custom effect in musicpy sampler module,
-# but it actually needs to extend the length of the rendered audio because the delay effect
-# will cause the audio much more longer, so I update some functionalities to set the whole length
-# or extra length for rendered audio. Could be used in musicpy sampler module's play and export functions,
-sf2_loader's play and export chord and piece functions. Planning to add to easy sampler as well.
-
-
-# here are the test codes of delay function
-
-from musicpy.sampler import *
-import audio_effects as ae
-
-current = sampler(3)
-current.load(1, 'G:/fl studio files/sound modules/sf2 files/16-Bit Style Soundtrack/Music/Arachno.sf2')
-
-test_delay = chord('C5, G5, B5, C6, E6') % (1/2, 1/8)
-current_bpm = 130
-current_interval = bar_to_real_time(3/16, current_bpm, 1) / 1000
-for each in test_delay.notes:
-    each = custom(each, ae.delay, interval=current_interval, unit=10)
-current.play(test_delay, 1, bpm=current_bpm, extra_length=10)
-#current.export(test_delay, channel_num=1, bpm=current_bpm, extra_length=10, filename='Cmaj7 chord with delay.wav')
-
-
-# here are the test codes of speed_down function
-
-test_audio = AudioSegment.from_file('C5.wav')
-test_length = len(test_audio)
-speed_change_ratio = 0.5
-y = speed_down(test_audio, speed_change_ratio)
-play_sound(y)
-print(len(y), len(test_audio) / speed_change_ratio)
-'''
