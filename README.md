@@ -53,9 +53,11 @@ speed_down(sound,
 
 # chunk_size: the chunk size of the audio to be cut in, in ms
 
-# crossfade: the time of fading effects between 2 adjacent chunks when concatenating the duplicates of each chunk, in ms
+# crossfade: the time of fading effects between 2 adjacent chunks when concatenating
+# the duplicates of each chunk, in ms
 
-# merge_crossfade: the time of fading effects between 2 adjacent chunks when concatenating the chunks after the duplicating process, in ms
+# merge_crossfade: the time of fading effects between 2 adjacent chunks when concatenating
+# the chunks after the duplicating process, in ms
 
 # crossfade_threshold: the minimum value of crossfade, in ms
 
