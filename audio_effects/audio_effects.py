@@ -30,6 +30,8 @@ def delay(sound, interval=0.5, unit=6, volumes=None, decrease_unit=None):
     # delay effect using pydub, the delay sounds would be decreasing volume one by one,
     # placing at a interval one after another after the original sound
 
+    # sound: a pydub AudioSegment instance
+    
     # interval: the time between each delay sound in seconds
 
     # unit: the number of the delay sounds
@@ -37,7 +39,7 @@ def delay(sound, interval=0.5, unit=6, volumes=None, decrease_unit=None):
     # volumes: you can specify the volume of each delay sound using this parameter,
     # could be a list or tuple, the elements are volume percentages (from 0 to 100)
 
-    # decrease_unit: you can specify the decrease unit of the delay sounds using this parameter
+    # decrease_unit: you can specify the decrease unit (in percentages) of the volumes of the delay sounds using this parameter
     '''
     # examples
     
