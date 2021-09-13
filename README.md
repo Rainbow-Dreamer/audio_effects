@@ -1,6 +1,19 @@
 # audio_effects
  This is a python package with some audio effects functions such as delay, speed changes implemented in python, with the help of pydub and numpy.
 
+# Installation
+You can install this package via pip, run this line in cmd/terminal
+```
+pip install audio_effects
+```
+
+# Importing
+```python
+import audio_effects as ae
+from pydub import AudioSegment
+from pydub.playback import _play_with_simpleaudio as play_sound
+```
+
 # Usage
 ## delay
 This `delay` function adds delay effects to audio using pydub, the delay sounds would be decreasing volume one by one, placing at a interval one after another after the original sound. The return value is a new pydub AudioSegment instance with the delay effects added.
@@ -27,6 +40,7 @@ current_interval = ae.bar_to_real_time(3 / 16, current_bpm, 1) / 1000
 current_audio_with_delay = ae.delay(current_audio,
                                     interval=current_interval,
                                     unit=10)
+play_sound(current_audio_with_delay) # listen to the delay effects
 ```
 The delay function works really well as expected, given precise time interval between each delay sound and the number of delay sounds, you can make custom delay effects on audio files.
 
@@ -67,6 +81,7 @@ speed_down(sound,
 current_audio = AudioSegment.from_file('Cmaj7_chord.mp3')
 speed_change_ratio = 0.7
 current_audio_slow_down = ae.speed_down(current_audio, speed_change_ratio)
+play_sound(current_audio_slow_down) # listen to the slow down version of the audio
 ```
 
 ### There will be more on the list, I will document some other functions here when I have time
