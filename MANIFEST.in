@@ -1,1 +1,1 @@
-include musicpy/simpleaudio/*.pyd
+include simpleaudio/*.pyd
