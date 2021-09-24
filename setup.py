@@ -3,22 +3,22 @@ from os import path
 
 setup(name='audio_effects',
       packages=find_packages(),
-      version='0.17',
-      license='GPLv3',
+      version='0.18',
+      license='LGPLv2.1',
       description=
       'Some audio effects such as delay, speed changes implemented in python',
       author='Rainbow-Dreamer',
       author_email='1036889495@qq.com',
       url='https://github.com/Rainbow-Dreamer/audio_effects',
       download_url=
-      'https://github.com/Rainbow-Dreamer/audio_effects/archive/0.17.tar.gz',
+      'https://github.com/Rainbow-Dreamer/audio_effects/archive/0.18.tar.gz',
       keywords=['python', 'audio', 'effects'],
       install_requires=['pydub', 'numpy'],
       classifiers=[
           'Development Status :: 3 - Alpha',
           'Intended Audience :: Developers',
           'Topic :: Software Development :: Build Tools',
-          'License :: OSI Approved :: GNU Affero General Public License v3',
+          'License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)',
           'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
           'Programming Language :: Python :: 3.8',
