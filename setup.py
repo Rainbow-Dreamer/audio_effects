@@ -3,7 +3,7 @@ from os import path
 
 setup(name='audio_effects',
       packages=find_packages(),
-      version='0.18',
+      version='0.19',
       license='LGPLv2.1',
       description=
       'Some audio effects such as delay, speed changes implemented in python',
@@ -11,7 +11,7 @@ setup(name='audio_effects',
       author_email='1036889495@qq.com',
       url='https://github.com/Rainbow-Dreamer/audio_effects',
       download_url=
-      'https://github.com/Rainbow-Dreamer/audio_effects/archive/0.18.tar.gz',
+      'https://github.com/Rainbow-Dreamer/audio_effects/archive/0.19.tar.gz',
       keywords=['python', 'audio', 'effects'],
       install_requires=['pydub', 'numpy'],
       classifiers=[
