@@ -1,2 +1,2 @@
 pydub
-numpy
+numpy==1.20.3
