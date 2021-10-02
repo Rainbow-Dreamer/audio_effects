@@ -83,6 +83,7 @@ def pitch_change(sound,
     new_sample_rate = int(sound.frame_rate * (2.0**(semitones / 12)))
     result = sound._spawn(sound.raw_data,
                           overrides={'frame_rate': new_sample_rate})
+    result = result.set_frame_rate(44100)
     speed_changes = len(result) / len(sound)
     if speed_changes != 1:
         if speed_changes > 1:
