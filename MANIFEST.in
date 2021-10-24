@@ -1,2 +1,1 @@
-include simpleaudio/*.pyd
 include test/*
